@@ -1,0 +1,26 @@
+******************Issues***************** 
+42 - Settings - Back button not working
+Welcome screen - Name and Screen name - Text not visible properly
+Rule Book - back button not working and also check all the screen back button
+36 - If i enter  Full Name same name applyin to the PAN card text
+Preferences - Dare Theme not working
+PAN Card - Send a copy to my email - Check box not working
+Add opacity to the background modal wherever modal screen
+In wallet - Add Money screen - Clicked amount not displaying in text box input
+32 - Your transactions - when click on second  show more icon - it displaying first row text and copy icon, 
+add another rows like DailyHit,Money added, Refund, 
+After adding the money - Property setText' does not exist error
+
+ 
+
+Errors - Second Tab - Play Game first 
+Each Child should have 
+Click on 32 - Filter icon error - 
+ 
+
+
+Person Details  - Except PAN remaining navigation?
+FAQ - Navigation?
+
+
+

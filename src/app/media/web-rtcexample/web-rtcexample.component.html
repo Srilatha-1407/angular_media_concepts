@@ -1,0 +1,20 @@
+
+  <h2 style="text-align: center;">webRTC(Web Real-Time Communication)</h2>
+  <br>
+  <div style="text-align: center;">
+    <button (click)="startCall()">Start Video</button>
+    <button (click)="startRecording()">Start Recording</button>
+    <button (click)="pauseRecording()" [disabled]="isRecordingPaused">Pause Recording</button>
+    <br>
+    <br>
+    <button (click)="resumeRecording()" [disabled]="!isRecordingPaused">Resume Recording</button>
+    <button (click)="stopRecording()">Stop Recording</button>
+    <button (click)="playRecordedVideo()">Play Recorded Video</button>
+  </div>
+  <br>
+  <div style="text-align: center;">
+    <video #localVideo autoplay  muted class="vd"></video>
+    <br>
+    <br>
+    <!-- <video #recordedVideoElement autoplay controls class="vd"></video> -->
+  </div>
