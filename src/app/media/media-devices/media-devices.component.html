@@ -1,0 +1,107 @@
+<!-- <div>
+    <video id="videoElement" width="640" height="480" controls autoplay></video>
+  </div>
+  
+  <div>
+    <button (click)="toggleRecording()">Toggle Recording</button>
+  </div> -->
+  
+  <!-- app.component.html -->
+
+  <!-- <div>
+    <h2>Media Video Recording</h2>
+    <button (click)="startRecording()">Start Video Recording</button>
+    <button (click)="stopRecording()">Stop Video Recording</button>
+    <button (click)="downloadRecordedVideo()">Download Recorded Video</button>
+    <video #liveVideo autoplay></video>
+    <h3>Recorded Video</h3>
+    <video #recordedVideo controls></video>
+  </div>
+  
+  <div>
+  <h2>Captured Image when video is Recording</h2>
+  <button (click)="captureImage()">Capture Image</button>
+  <button (click)="downloadCapturedImage()" [disabled]="!imageDataURL">Download Captured Image</button>
+  <img [src]="imageDataURL" *ngIf="imageDataURL" style="width:200px;height:200px" />
+  </div> -->
+<!-- <div>
+  <b>Media Devices</b> -  navigator.mediaDevices provides access to connected media input devices like cameras and microphones.
+ <br> Usage in Angular/TypeScript: In Angular/TypeScript, you can use navigator.mediaDevices.getUserMedia() to request access to a user's camera and/or microphone. This method returns a promise that resolves with a MediaStream object, allowing you to capture audio and video.
+ <br> ex- Example: In an Angular component, you might use this to prompt the user for permission to access their camera and microphone and display the video stream in an HTML video element.
+</div>
+<br>
+<div>
+ <b>Media Stream</b> A MediaStream represents a stream of media content, typically audio or video, that's obtained from a device's camera, microphone, or other multimedia sources.
+Usage in Angular/TypeScript: After obtaining a MediaStream using navigator.mediaDevices.getUserMedia(), you can use it to capture video frames or audio data, manipulate the stream, or display it in your application.
+Example: In an Angular application, you might use a MediaStream object to create a video chat feature or capture video/audio for recording.
+</div>
+<br>
+<div>
+ <b>
+  Media Recorder
+ </b>  MediaRecorder is an API that allows recording of media streams (audio and video) in the browser.
+Usage in Angular/TypeScript: With MediaRecorder, you can record the content from a MediaStream object and save it as a file. You can listen for data available events to collect the recorded data, stop the recording, and save it as a file in various formats (like WebM, WAV, etc.).
+Example: In Angular, you might use MediaRecorder to record a video/audio stream obtained via getUserMedia() and then save it to the server or locally in the browser.
+</div>
+<br> -->
+<h2 style="text-align: center;">Media</h2>
+<div>
+  <b>Media Devices</b> -  navigator.mediaDevices provides access to connected media input devices like cameras and microphones.
+ <br> navigator.mediaDevices.getUserMedia() to request access to a user's camera and/or microphone. This method returns a promise that resolves with a MediaStream object, allowing to capture audio and video.
+</div>
+<br>
+<div>
+ <b>Media Stream</b> A MediaStream represents a stream of media content, typically audio or video, that's obtained from a device's camera, microphone, or other multimedia sources.
+ <br>After obtaining a MediaStream using navigator.mediaDevices.getUserMedia(), we can use it to capture video frames or audio data, manipulate the stream, or display it in your application.
+</div>
+<br>
+<div>
+ <b>
+  Media Recorder
+ </b>  MediaRecorder is an API that allows recording of media streams (audio and video) in the browser.
+ <br>Usage in Angular/TypeScript: With MediaRecorder, we can record the content from a MediaStream object and save it as a file. we can listen for data available events to collect the recorded data, stop the recording, and save it as a file in various formats (like WebM, WAV, etc.).
+</div>
+<br>
+<br>
+  <div class="content">
+  <h2 style="text-align: center;">Video</h2>
+    <!-- Video recording controls -->
+    <button (click)="mediaService.startRecording(liveVideoElement,recordedVideoElement)">Start Video Recording</button>
+    <button (click)="stopRecording()">Stop Video Recording</button>
+    <button (click)="downloadRecordedVideo()">Download Recorded Video</button>
+    <br>
+    <video autoplay  #liveVideo class="vd"></video>
+    <!-- controls -->
+    <br>
+    <div [hidden]="recordedV">
+      <h3>Recorded Video</h3>
+      <video controls poster="" #recordedVideo class="vd"></video>
+    </div>
+  </div>
+  <div class="content">
+  <h2 style="text-align: center;">Audio</h2>
+    <!-- Audio recording controls -->
+    <button (click)="mediaService.startAudioRecording(audioPlayerElement)">Start Audio Recording</button>
+    <button (click)="mediaService.stopAudioRecording()">Stop Audio Recording</button>
+    <button (click)="mediaService.downloadRecordedAudio()">Download Recorded Audio</button>
+    <br>
+    <br>
+    <div>
+      <audio controls #audioPlayer></audio>
+    </div>
+    <span *ngIf="mediaService.isAudioRecording" style="color: red;">Recording...</span>
+    <br>
+  </div>
+  
+  <div class="content">
+  <h2 style="text-align: center;">Image Capture</h2>
+    <!-- Image capture controls -->
+    <button (click)="mediaService.captureImage()">Capture Image</button>
+    <button (click)="mediaService.downloadCapturedImage()">Download Captured Image</button>
+    <br>
+    <br>
+    <img class="cpt" [src]="mediaService.imageDataURL" *ngIf="mediaService.imageDataURL" />
+  </div>
+  
+
+

@@ -1,0 +1,79 @@
+<!---***************PDF generator*************-->
+
+
+
+<div [innerHTML]="highlightedContent"></div>
+<br>
+<h3 style="text-align: center;">Generate and Upload PDF: </h3>
+<div class="row">
+  <div class="col-md-2"></div>
+  <div class="col">    
+    <div class="file-preview-container" >
+      <div id="pdfContent" style="width: 80%;">  
+        <br>      
+        <p>PDF CONTENT</p>
+        <p>Converting HTML To PDF formatConverting HTML To PDF formatConverting HTML To PDF formatConverting HTML simply dummy text of the printing and typesetting industry.simply dummy text of the printing and typesetting industry.simply dummy text of the printing and typesetting industry.simply dummy text of the printing and typesetting industry.simply dummy text of the printing and typesetting industry. To PDF formatConverting HTML To PDF format</p>
+        <p class="latha">simply dummy text of the printing and typesetting industry.</p>
+        <p class="sri">Converting HTML To PDF format</p>
+        <p >simply dummy text of the printing and typesetting industry. </p>
+       <!-- <table style="border:2px solid black">
+        <thead>
+          
+            <tr>
+              <th style="border:2px solid black">FIRST</th>
+              <th style="border:2px solid black">SECOND</th>
+              <th style="border:2px solid black">THIRD</th>
+              <th style="border:2px solid black">FOURTH</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td style="border:2px solid black" >one</td>
+              <td style="border:2px solid black">two</td>
+              <td style="border:2px solid black">three</td>
+              <td style="border:2px solid black">Fourth</td>
+            </tr>
+          </tbody>
+     
+       </table> -->
+         
+      </div>
+
+      <!-- <ngx-extended-pdf-viewer [base64Src]="selectedFileB64" backgroundColor="#ffffff" [height]="'90vh'"
+      [useBrowserLocale]="true" [handTool]="false" [showHandToolButton]="true" *ngIf="isFileDocument">
+    </ngx-extended-pdf-viewer> -->
+    </div>
+  </div>
+    <div class="col-md-2"></div>
+</div>
+
+  
+  <div class="col">
+    <div class="mat-form-field-container">
+     
+      <button  mat-raised-button (click)="generatePdf()" style="margin-right: 5%;padding: 10px;">Generate PDF</button>
+
+      <button type="button" mat-raised-button (click)="fileInput.click()" style="padding: 10px;">Choose PDF</button>
+      <br>
+      <input hidden (change)="onFileSelected($event)" #fileInput type="file">
+      <span class="file-nane">{{selectedFile?.name}}</span>
+<br>
+    </div>
+    <div class="file-preview-container">
+      <img *ngIf="isFileImage" [src]="selectedFilePath" height="200" >
+      <ngx-extended-pdf-viewer [base64Src]="selectedFileB64" backgroundColor="#ffffff" [height]="'90vh'"
+        [useBrowserLocale]="true" [handTool]="false" [showHandToolButton]="true" *ngIf="isFileDocument">
+      </ngx-extended-pdf-viewer>
+    </div>
+  </div>
+  
+  
+    <!-- References  
+    https://www.npmjs.com/package/ngx-extended-pdf-viewer
+    https://pdfviewer.net/extended-pdf-viewer/getting-started
+    https://youtu.be/ulNSwbMuzLI?si=IH2lzszvhqCzQKdh
+    -->
+
+
+
+

@@ -1,0 +1,9 @@
+<!-- media-recorder.component.html -->
+<div>
+  <video #videoElement controls width="400" (click)="toggleVideoPlayback()"></video>
+</div>
+<div>
+  <button (click)="toggleRecording()">
+    {{ recording ? 'Stop Recording' : 'Start Recording' }}
+  </button>
+</div>

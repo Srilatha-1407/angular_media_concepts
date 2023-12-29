@@ -1,0 +1,5 @@
+html {
+    background: var(--theme-background);
+    color: var(--theme-color);
+    transition: all ease-in-out 400ms;
+  }

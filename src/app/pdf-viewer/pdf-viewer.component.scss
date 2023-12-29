@@ -1,0 +1,18 @@
+:host ::ng-deep .ngx-extended-pdf-viewer-container {
+    width: 100%;
+    height: 50vh;
+  }
+  .mat-form-field-container{
+    text-align: center;
+  }
+  .file-nane{
+    margin: 5px 0px;
+    font-weight: bold;
+  }
+
+::ng-deep  ngx-extended-pdf-viewer #primaryEditorFreeText {
+    display: none; 
+}
+::ng-deep  ngx-extended-pdf-viewer #primaryEditorStamp {
+  display: none; 
+}

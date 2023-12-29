@@ -1,0 +1,16 @@
+<h2 style="text-align: center;"> Operators </h2>
+<p>RxJS operators are a powerful feature of Angular that allow you to manipulate and transform streams of data. They can be used with observables to filter, map, reduce, and perform other operations on the data. A Pipeable Operator is a function that takes an Observable as its input and returns another Observable</p>
+<p>An operator is a pure function that takes a observable as an input and provide the output in also in the form of an observable</p>
+<!-- <button (click)="runExamples()">Run Examples</button> -->
+<ul>
+  <li *ngFor="let result of results">{{ result }}</li>
+</ul>
+
+<h2 style="text-align: center;">Observables</h2>
+<p>Asynchronous code is non-blocking.</p>
+<p>Observables are not waiting for the complete data to be available. An Observable streams the data. When the data is available partially it will send to the client.</p>
+<h3>User List:</h3>
+    <ul>
+      <li *ngFor="let user of users">{{ user.name }}</li>
+    </ul>
+    <div *ngIf="errorMessage" class="error-message">{{ errorMessage }}</div>
